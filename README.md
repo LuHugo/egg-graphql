@@ -70,7 +70,7 @@ exports.graphql = {
 
 ## 使用方式
 
-请将 graphql 相关逻辑放到 app/graphql 下，请参考测试用例，里面有connector/schema 的目录结构, 以及 dataloader 的使用。
+请将 graphql 相关逻辑放到 app/graphql 下，
 
 目录结构如下
 
@@ -78,15 +78,21 @@ exports.graphql = {
 .
 ├── app
 │   ├── graphql
-|   |   ├── common
-|   |   |   └── directive.js  // 自定义directive
-│   │   ├── project
-│   │   │   └── schema.graphql
-│   │   └── user  // 一个graphql模型
-│   │       ├── connector.js  
-│   │       ├── resolver.js
-│   │       └── schema.graphql 
+│   │   ├── connector
+│   │   │   ├── book.js
+│   │   │   └── user.js
+│   │   ├── directive  // 自定义directive
+│   │   │   ├── common.js
+│   │   ├── resolver
+│   │   │   ├── book.js
+│   │   │   └── user.js
+│   │   └── schema
+│   │       ├── book.graphql
+│   │       ├── mutation.graphql
+│   │       ├── query.graphql
+│   │       └── user.graphql
 │   ├── model
+│   │   ├── book.js
 │   │   └── user.js
 │   ├── public
 │   └── router.js
